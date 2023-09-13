@@ -3,23 +3,23 @@ using namespace std;
 
 void solve()
 {
-	float a,b,c;
+	int a,b,c;
 	cin>>a>>b>>c;
-
-	if(a==b) {
-		cout<<"0\n";
-		return;
-	}
-	else if(abs(a-b)<=c)
-	{
-		cout<<"1\n";
-	}
-	else
-	{
-		float ans=abs(a-b)/2;
-		ans=ceil(ans/c);
-		cout<<ans<<endl;
-	}
+	cout<<((abs(a - b) + 2 * c - 1) / (2 * c))<<endl;
+	// if(a==b) {
+	// 	cout<<"0\n";
+	// 	return;
+	// }
+	// else if(abs(a-b)<=c)
+	// {
+	// 	cout<<"1\n";
+	// }
+	// else
+	// {
+	// 	float ans=abs(a-b)/2;
+	// 	ans=ceil(ans/c);
+	// 	cout<<ans<<endl;
+	// }
 
 	
 }
