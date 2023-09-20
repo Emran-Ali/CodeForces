@@ -3,21 +3,24 @@ using namespace std;
 
 void solve()
 {
-	int n, dt=0;
-	map<int, int> mp;
-	cin>>n;
-	int ar[n];
-	for(int i=0; i<n; i++)
+	string s;
+	int n;
+	cin>>n>>s;
+	int ans=0, tmp=1;
+	for(int i=1; i<n; i++)
 	{
-		cin>>ar[i];
-
-		if(mp[ar[i]]==0)
-			dt++;
-		mp[ar[i]]++;
+		if(s[i]==s[i-1])
+			tmp++;
+		else
+		{
+			ans=max(ans,tmp);
+			tmp=1;
+		}
 	}
-	if((n-dt)%2==0) cout<<dt<<endl;
-	else
-		cout<<dt-1<<endl;
+	ans=max(ans,tmp);
+	cout<<ans+1<<endl;
+
+	
 }
 
 int main()
@@ -31,5 +34,6 @@ int main()
     {
     	solve();
     }
+
     return 0;
 }

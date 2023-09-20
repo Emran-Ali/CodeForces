@@ -1,23 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
 void solve()
 {
-	int n, dt=0;
-	map<int, int> mp;
-	cin>>n;
-	int ar[n];
-	for(int i=0; i<n; i++)
-	{
-		cin>>ar[i];
+	long long n, k;
 
-		if(mp[ar[i]]==0)
-			dt++;
-		mp[ar[i]]++;
-	}
-	if((n-dt)%2==0) cout<<dt<<endl;
-	else
-		cout<<dt-1<<endl;
+	cin>>n>>k;
+
+	if(n%2==0) cout<<"YES\n";
+	else if((n-k)%2==0) cout<<"YES\n";
+	else cout<<"NO\n";
 }
 
 int main()
@@ -31,5 +24,7 @@ int main()
     {
     	solve();
     }
+
     return 0;
 }
+

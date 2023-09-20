@@ -3,21 +3,22 @@ using namespace std;
 
 void solve()
 {
-	int n, dt=0;
-	map<int, int> mp;
-	cin>>n;
-	int ar[n];
-	for(int i=0; i<n; i++)
+	string s;
+	cin>>s;
+	int sz=s.size(),ye=1;
+	for(int i=0; i<(sz/2)-1; i++)
 	{
-		cin>>ar[i];
+		if(s[i]!=s[i+1])
+		{
+			ye=0;
+			cout<<"YES\n";
+			break;
+		}
 
-		if(mp[ar[i]]==0)
-			dt++;
-		mp[ar[i]]++;
 	}
-	if((n-dt)%2==0) cout<<dt<<endl;
-	else
-		cout<<dt-1<<endl;
+	if(ye) cout<<"NO\n";
+
+	
 }
 
 int main()
@@ -31,5 +32,6 @@ int main()
     {
     	solve();
     }
+
     return 0;
 }

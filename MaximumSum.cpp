@@ -3,21 +3,17 @@ using namespace std;
 
 void solve()
 {
-	int n, dt=0;
-	map<int, int> mp;
-	cin>>n;
+	int n, k, sum=0;
+	cin>>n>>k;
 	int ar[n];
 	for(int i=0; i<n; i++)
 	{
 		cin>>ar[i];
-
-		if(mp[ar[i]]==0)
-			dt++;
-		mp[ar[i]]++;
+		sum+=ar[i];
 	}
-	if((n-dt)%2==0) cout<<dt<<endl;
-	else
-		cout<<dt-1<<endl;
+	sort(ar)
+
+	
 }
 
 int main()
@@ -31,5 +27,6 @@ int main()
     {
     	solve();
     }
+
     return 0;
 }
