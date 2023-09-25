@@ -26,5 +26,22 @@ int main()
     	cout<<f;
     }
 
+    // while(t--)
+    // {
+    //     bool ans=false;
+    //     char a;
+    //     cin>>a;
+    //     for(auto x : s)
+    //     {
+    //         if(a==x)
+    //         {
+    //             ans=true;
+    //             break;
+    //         }
+    //     }
+    //     string f=(ans) ? "yes\n" : "no\n";
+    //     cout<<f;
+    // }
+
     return 0;
 }
