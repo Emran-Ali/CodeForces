@@ -16,7 +16,8 @@ void solve()
 		int l, k, ans=-1;
 		cin>>l>>k;
 		int re=ar[l-1];
-		for(int j=l-1; j<n; j++)
+		if(re>=k) ans=max(ans, j);
+		for(int j=l; j<n; j++)
 		{
 			re =re & ar[j];
 			// cout<<re<<" re\n";

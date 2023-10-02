@@ -6,14 +6,11 @@ void solve()
 {
 	ll n,k,x;
 	cin>>n>>k>>x;
-	int l=n-k;
-	if(n*(n+1)/2<x || k*(k+1)/2>x)
-		cout<<"no\n";
+	if( k*(k+1)<=x*2 && (n*(n+1))-(n-k)*(n-k+1)>=x*2)
+		cout<<"yes\n";
 	
-	else if((n*(n+1)/2)-(l*(l+1)/2)<x)
+	else 
 		cout<<"no\n";
-	else
-	cout<<"yes\n";	
 }
 
 int main()
